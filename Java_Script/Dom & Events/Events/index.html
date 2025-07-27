@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Events</title>
+  </head>
+  <body>
+    <div id="note">
+      <h1>JavaScript Events</h1>
+      <p id="owel">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam
+        necessitatibus ducimus dolor consequatur maxime ad!
+      </p>
+    </div>
+  </body>
+  <script>
+    // 1.Way
+    // document.getElementById("owel").onclick = function () {
+    //   alert("Paragraph Clicked");
+    // };
+
+    // 2.Way
+    // document.getElementById("owel").addEventListener("click", function () {
+    //   alert("Paragraph Clicked");
+    // });
+
+    document.getElementById("note").addEventListener("click", function () {
+      console.log("Clicked On UI ");
+    });
+    document.getElementById("owel").addEventListener("click", function (e) {
+      console.log("Paragraph Clicked");
+      e.stopPropagation();
+    });
+
+    document.getElementById("owel").addEventListener("click", function (e) {
+      console.log("Paragraph Clicked");
+      e.stopPropagation();
+    });
+    // Type,Tmestemp,defaultPrevented
+    // Target,Toelementtid
+
+    // Mouse events
+    <body onresize="greet()">
+      onresize
+      <body onscroll="greet()">
+        onscroll
+        <button onclick="greet()">On click</button>
+        <button ondblclick="greet()">Double click</button>
+        <button oncontextmenu="greet()">Right click</button>
+        <button onmouseenter="greet()">Mouse Hover</button>
+        <button onmouseout="greet()">Mouse Out</button>
+        <button onmousedown="greet()">Mouse Down</button>
+        <button onkeypress="greet()">Key Press</button>
+        <button onkeyup="greet()">Key UP</button>
+      </body>
+    </body>;
+  </script>
+</html>
