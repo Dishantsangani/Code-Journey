@@ -1,4 +1,0 @@
-Schema - Deffine the structre
-
-Schema - Model
-Using Model we do CRUD operation
