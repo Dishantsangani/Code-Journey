@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linear Search</title>
+  </head>
+  <body>
+    <input type="text" placeholder="Search Here" id="search" />
+    <button onclick="Search()">Search</button>
+  </body>
+  <script>
+    function Search() {
+      let data = [20, 40, 60, 5, 10, 70, 80, 99];
+      let item = document.getElementById("search").value;
+      let index = undefined;
+      for (i = 0; i < data.length - 1; i++) {
+        if (data[i] == parseInt(item)) {
+          index = i;
+          break;
+        }
+      }
+      console.log("index", index);
+    }
+  </script>
+</html>
